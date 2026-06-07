@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My study room</title>
+    <style>
+        *{
+            margin: 0 px;
+            padding: 0 px;
+            box-sizing: border-box;
+        }
+        body
+        {
+            background-image:"dark.jpg" ;
+            background-color: rgb(95, 95, 95);
+            width: 100vw;
+            height: 100vh;
+            display: grid;
+            place-content: center;
+        }
+        div
+        {
+            background-color: orangered;
+            width: 400px;
+            text-align: center;
+        }
+        img
+        {
+            width: 100%;
+        }
+        button
+        {
+            width: 80%;
+            height: 400 px;
+            font-size: 20px;
+            margin: 4px;
+            border-radius: 5px;
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img src="bulboff.jpeg" alt="bulboff" id="bulb">
+        <button onclick="change()" id="btn">Turn On</button>
+    </div>
+    <script>
+        let bulb = document.getElementById('bulb');
+        let btn = document.getElementById('btn');
+        let light = false;
+        function change()
+        {
+            if(light==false)
+        {
+             bulb.setAttribute("src","bulbon.jpeg");
+             light = true;
+             btn.innerHTML="Turn On"
+        }
+           
+        else
+        {
+        bulb.setAttribute("src","bulboff.jpeg")
+        light = false;
+         btn.innerHTML="Turn Off"
+        }
+        }
+    
+        {
+
+        }
+    </script>
+</body>
+</html>
